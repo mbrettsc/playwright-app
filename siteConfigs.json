@@ -1,0 +1,18 @@
+{
+  "inhuur.werkeninzuidoostbrabant.nl": {
+    "key": "ZUODOOST",
+    "baseUrl": "https://inhuur.werkeninzuidoostbrabant.nl",
+    "loginUrl": "https://inhuur.werkeninzuidoostbrabant.nl/login",
+    "cookieSelector": "button.accept",
+
+    "login": {
+      "usernameSelector": "#Email",
+      "passwordSelector": "#Password",
+      "submitSelector": "input[type=\"submit\"][value=\"Inloggen\"]"
+    },
+
+    "postLogin": {
+      "successSelector": "h1"
+    }
+  }
+}
