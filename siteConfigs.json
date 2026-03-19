@@ -2,8 +2,9 @@
   "inhuur.werkeninzuidoostbrabant.nl": {
     "key": "ZUODOOST",
     "baseUrl": "https://inhuur.werkeninzuidoostbrabant.nl",
-    "loginUrl": "https://inhuur.werkeninzuidoostbrabant.nl/login",
     "cookieSelector": "button.accept",
+    "shadowDom": false,
+
 
     "login": {
       "usernameSelector": "#Email",
@@ -12,7 +13,71 @@
     },
 
     "postLogin": {
-      "successSelector": "h1"
+      "successSelector": "body"
+    }
+  },
+  "supplierportal.yacht.nl": {
+    "key": "YACHT",
+    "baseUrl": "https://supplierportal.yacht.nl",
+    "cookieSelector": "button.accept",
+    "shadowDom": false,
+
+    "login": {
+      "usernameSelector": "#username",
+      "passwordSelector": "#password",
+      "submitSelector": "input[type=\"submit\"][value=\"Log In\"]"
+    },
+
+    "postLogin": {
+      "successSelector": "body"
+    }
+  },
+  "flexwestbrabant.my.site.com": {
+    "key": "FLEXWESTBRABANT",
+    "baseUrl": "https://flexwestbrabant.my.site.com",
+    "cookieSelector": "button.accept",
+    "shadowDom": true,
+
+
+    "login": {
+      "usernameSelector": "#username",
+      "passwordSelector": "#password",
+      "submitSelector": "input[type=\"submit\"][value=\"Log In\"]"
+    },
+
+    "postLogin": {
+      "successSelector": "body"
+    }
+  },
+  "identity.s2c.mercell.com": {
+    "key": "MERCELL",
+    "baseUrl": "https://identity.s2c.mercell.com",
+    "cookieSelector": "button.accept",
+    "shadowDom": false,
+
+    "login": {
+      "steps": [
+        {
+          "fillSelector": "#Username",
+          "credential": "username",
+          "submitSelector": "#loginBtn"
+        },
+        {
+          "fillSelector": "#Password",
+          "credential": "password",
+          "submitSelector": "#loginBtn"
+        }
+      ]
+    },
+    "postLogin": {
+      "successSelector": "body",
+      "extraSteps": [
+        {
+          "clickSelector": "a[href*='overzicht'], a:has-text('Overzicht')",
+          "waitFor": "body"
+        }
+      ]
     }
   }
+  
 }
