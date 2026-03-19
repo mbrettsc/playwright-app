@@ -42,7 +42,7 @@ async function scrape(url) {
     });
 
     const html = await page.content();
-    await page.waitForTimeout(50000);
+    
     console.log("✅ Scraping successful");
 
     return {
