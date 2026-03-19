@@ -6,7 +6,7 @@ const { login } = require('./login');
 async function scrape(url) {
   console.log("Incoming URL:", url);
 
-  const browser = await chromium.launch({ headless: false });
+  const browser = await chromium.launch({ headless: true });
   const context = await browser.newContext({
     ignoreHTTPSErrors: true
   });
